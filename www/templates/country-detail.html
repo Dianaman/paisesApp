@@ -1,0 +1,18 @@
+<ion-view view-title="{{pais.name}}">
+	<ion-nav-buttons side="left">
+      <button class="button" ng-click="goBack()">
+        <i class="ion-ios-arrow-back"></i> Back
+      </button>
+    </ion-nav-buttons>
+  <ion-content class="padding">
+    <h3>Capital</h3> <p>{{pais.capital}}</p>
+
+    <google-map center="map.center" 
+    			zoom="map.zoom" 
+    			draggable="true" 
+    			options="map.options" 
+    			control="map.control">
+		<marker coords="marker.coords" options="marker.options" idkey="marker.id" ></marker>  
+	</google-map>
+  </ion-content>
+</ion-view>
